@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background: #DC2424;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A569D, #DC2424);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A569D, #DC2424);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main>.box {
+    width: 300px;
+    height: 300px;
+    /* border: 1px solid rgb(48, 5, 48); */
+    transform: rotate3d(1, 1, 1, 36deg);
+    transform-style: preserve-3d;
+    position: relative;
+    animation: rotate 2s linear infinite 1s alternate;
+
+
+}
+
+main>.box>div {
+    width: 100%;
+    height: 100%;
+    /* background: #7b65497e; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+main>.box>div>div {
+    border: 2px solid grey;
+    width: 33.3333%;
+    height: 33.33333%;
+    animation: para 1.5s linear infinite 1s alternate;
+
+
+}
+
+
+main>.box>div:nth-of-type(1) {
+    transform: translateZ(-150px);
+}
+
+main>.box>div:nth-of-type(1)>* {
+    background: white;
+}
+
+main>.box>div:nth-of-type(2)>* {
+    background: red;
+}
+
+main>.box>div:nth-of-type(3)>* {
+    background: rgb(230, 117, 18);
+}
+
+main>.box>div:nth-of-type(4)>* {
+    background: green;
+}
+
+main>.box>div:nth-of-type(5)>* {
+    background: yellow;
+}
+
+main>.box>div:nth-of-type(6)>* {
+    background: blue;
+}
+
+main>.box>div:nth-of-type(2) {
+    transform: translateZ(150px);
+}
+
+main>.box>div:nth-of-type(3) {
+    transform: translateZ(-150px) rotateY(-90deg);
+    transform-origin: left;
+}
+
+main>.box>div:nth-of-type(4) {
+    transform: translateZ(-150px) rotateY(90deg);
+    transform-origin: right;
+}
+
+main>.box>div:nth-of-type(5) {
+    transform: translateZ(-150px) rotateX(90deg);
+    transform-origin: top;
+}
+
+main>.box>div:nth-of-type(6) {
+    transform: translateZ(-150px) rotateX(-90deg);
+    transform-origin: bottom;
+}
+
+@keyframes para {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    40% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    70% {
+        transform: scale3d(0.5, 0.5, 0.5);
+    }
+
+    100% {
+        transform: scale3d(0.1, 0.1, 0.1);
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate3d(1, 1, 1, 360deg);
+    }
+}
