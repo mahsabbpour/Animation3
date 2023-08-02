@@ -1,12 +1,12 @@
 # 3-animation
 
-- [Demo Project] (https://mahsabbpour.github.io/3-animation/)
+- [Demo Project](   )
 
 - Developed by Mahsa Babapour
 
 - Created - 2023
 
-- Technologies Used - Html , Css
+- Technologies Used - Html , scss , js 
 
 - Role - Frontend
 
