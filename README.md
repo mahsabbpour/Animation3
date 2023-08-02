@@ -1,6 +1,6 @@
 # 3-animation
 
-- [Demo Project](https://mahsabbpour.github.io/TailwindProject/)
+- [Demo Project](https://mahsabbpour.github.io/3-animation/)
 
 - Developed by Mahsa Babapour
 
